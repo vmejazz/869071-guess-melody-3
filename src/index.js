@@ -2,9 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/app";
 
-const MAX_ERROR = 5;
+const MAX_ERROR = 3;
 
 ReactDOM.render(
-    <App errorCount={MAX_ERROR}/>,
+    <App maxError={MAX_ERROR}/>,
     document.getElementById(`root`)
 );
