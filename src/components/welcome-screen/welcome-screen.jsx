@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
+import PropTypes from "prop-types";
 
 const WelcomeScreen = (props) => {
-  // eslint-disable-next-line react/prop-types
   const {maxError} = props;
 
   return (
@@ -29,6 +29,10 @@ const WelcomeScreen = (props) => {
       </p>
     </section>
   );
+};
+
+WelcomeScreen.propTypes = {
+  maxError: PropTypes.number.isRequired
 };
 
 export default WelcomeScreen;
