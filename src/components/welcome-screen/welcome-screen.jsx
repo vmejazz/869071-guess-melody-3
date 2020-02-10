@@ -2,14 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const WelcomeScreen = (props) => {
-  const {maxError} = props;
+  const {maxError, buttonStartHandler} = props;
 
   return (
     <section className="welcome">
       <div className="welcome__logo">
         <img src="img/melody-logo.png" alt="Угадай мелодию" width="186" height="83" />
       </div>
-      <button className="welcome__button">
+      <button className="welcome__button" onClick={buttonStartHandler}>
         <span className="visually-hidden">
           Начать игру
         </span>
@@ -32,7 +32,8 @@ const WelcomeScreen = (props) => {
 };
 
 WelcomeScreen.propTypes = {
-  maxError: PropTypes.number.isRequired
+  maxError: PropTypes.number.isRequired,
+  buttonStartHandler: PropTypes.func
 };
 
 export default WelcomeScreen;
